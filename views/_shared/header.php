@@ -22,8 +22,17 @@
     <ul class="navbar-nav mr-auto">
 
     </ul>
-
   </div>
+  
+  <?php
+     if(!isset($_SESSION)){
+      session_start();
+  }
+  if(isset($_SESSION['Auth']))
+  {
+    echo "<a href='/user/logout'>Logout</a>";
+  }
+    ?>
 </nav>
 
 <?php
@@ -41,7 +50,7 @@
 </div>
 
 <?php
-unset($_SESSION['error']);
+  unset($_SESSION['error']);
     }
 ?>
 
@@ -60,6 +69,6 @@ unset($_SESSION['error']);
 </div>
 
 <?php
-unset($_SESSION['success']);
+  unset($_SESSION['success']);
     }
 ?>

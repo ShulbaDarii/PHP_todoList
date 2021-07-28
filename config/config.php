@@ -3,3 +3,4 @@
     const USER_NAME ="root";
     const DB_NAME = "todo_list";
     const PASSWORD ="";
+    const SALT = "R%^&GY*UIds";

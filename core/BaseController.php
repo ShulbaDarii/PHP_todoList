@@ -28,5 +28,10 @@ class BaseController
     {
         Header('location: '. $path);
     }
+
+
+    public function passwordHasher($value){
+        return sha1(SALT . $value . SALT);
+    }
 }
 
